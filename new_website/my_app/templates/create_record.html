@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<body>
+    <div class="conatainer p-3 shadow-md bg-light form-layout">
+
+        <h3>Please Create Your Record</h3><br>
+        
+
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+
+
+            {{form|crispy}}
+            <button type="submit" class="btn btn-success">Create Account</button>
+            
+
+        </form>
+    </div>
+    <br>
+</body>
+
+
+{% endblock content %}

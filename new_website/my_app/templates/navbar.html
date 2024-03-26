@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul.navbar_one {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 7%);
+  display: flex;
+ 
+ 
+}
+
+ul.navbar_one li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #11dd55;
+}
+li.logout {
+ margin-left: 1000px;
+}
+
+</style>
+</head>
+<body>
+
+<ul class="navbar_one">
+  <li><a class="" href="#home">Project-V</a></li>
+  <li><a href="{% url 'register' %}">Register</a></li>
+  <li><a href="{% url 'login' %}"> Login</a></li>
+  
+  <li class="about"><a href="{% url 'dashboard' %}">Dashboard &nbsp; <i class="fa fa-tachometer" aria-hidden="true"></i></a></li>
+  <li class="logout"><a href="{% url 'logout'  %}">Logout &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+</ul>
+
+</body>
+</html>
